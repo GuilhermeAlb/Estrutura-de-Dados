@@ -210,14 +210,23 @@ public class Lista {
 	//Buscar posi��o do valor
 	public void BuscarPosicao(int busca) {
 		if (ref == null) {//teste de lista vazia
-			System.out.println("n�o h� nenhum dado na lista. Lista Vazia.");
+			System.out.println("não há nenhum dado na lista. Lista Vazia.");
 		}
-		else { // caso a lista n esteja vazia, ent�o...
-			No i;
-			i = ref;
-			while (busca != i.getInfo()) {
+		else { // caso a lista n esteja vazia, então...
+			int posicao = 0;
+			for(No i = ref; i != null ; i.getProx()) {
+				posicao ++;
+				if (busca == i.getInfo()) { // valor encontrado na lista + sua posição
+					System.out.println("O primeiro valor "+busca+" está na posição "+posicao);
+				}
+				else if ((i.getProx() == null) && (i.getInfo() != busca)){// caso o valor nao esteja em nenhuma das posições da lista
+					System.out.println("valor nao encontrado");
+					System.out.println("posição -1. Inexistente!");
+					break;
+					
+				}
 				
-			}	
+			}
 		}
 		
 	}
