@@ -15,19 +15,19 @@ public class Teste {
 		
 		int op;
 		
-		do { //Inicio da execução do programa
+		do { //Inicio da execuï¿½ï¿½o do programa
 			
-			System.out.println("'''''''' Menu de Interação ''''''''");
+			System.out.println("'''''''' Menu de Interaï¿½ï¿½o ''''''''");
 			System.out.println("Digite 1 para inserir dados na lista");
 			System.out.println("Digite 2 para remover dados da lista");
 			System.out.println("Digite 3 para Imprimir a lista (primeiro ao ultimo)");
 			System.out.println("Digite 4 para Imprimir a lista (ultimo ao primeiro)");
 			System.out.println("Digite 5 para Imprimir nos dois sentidos anteriores");
-			System.out.println("Digite 0 para finalizar a execução");
+			System.out.println("Digite 0 para finalizar a execuï¿½ï¿½o");
 			op = sc.nextInt();
 			
 			if ((op < 0) || (op>5)) {
-				System.out.println("Opção não encontrada. Finalizando execução.");
+				System.out.println("Opï¿½ï¿½o nï¿½o encontrada. Finalizando execuï¿½ï¿½o.");
 				break;
 				
 			}
@@ -46,7 +46,7 @@ public class Teste {
 					op = sc.nextInt();
 
 					if (op == 1) {
-						System.out.println("Voltando à inserção...");
+						System.out.println("Voltando ï¿½ inserï¿½ï¿½o...");
 					}
 					else if (op ==0) {
 						System.out.println("Retornando ao Menu Inicial...");
@@ -56,28 +56,28 @@ public class Teste {
 						break;
 					}
 					else {
-						System.out.println("Opção não reconhecida. Retornando ao Menu Inicial...");
+						System.out.println("Opï¿½ï¿½o nï¿½o reconhecida. Retornando ao Menu Inicial...");
 						System.out.println();
 						System.out.println();
 						op = 0;
 
 					}
 				} while(op == 1);
-				break; // Final da Inserção
+				break; // Final da Inserï¿½ï¿½o
 			case 2: //Remover dados da lista
 				int remove;
 				do {
 					System.out.println();
 					System.out.println();
 
-					System.out.println("Digite um número a ser removido: ");
+					System.out.println("Digite um nï¿½mero a ser removido: ");
 					remove = sc.nextInt();
 					lista.Remover(remove);
 					System.out.println("Digite 2 para remover outro valor");
 					System.out.println("Digite 0 para voltar ao Menu Inicial");
 					op = sc.nextInt();
 					if (op == 2) {
-						System.out.println("Voltando à remoção...");
+						System.out.println("Voltando ï¿½ remoï¿½ï¿½o...");
 
 					}
 					else if (op == 0) {
@@ -87,7 +87,7 @@ public class Teste {
 
 					}
 					else {
-						System.out.println("Opção não reconhecida. Retornando ao Menu Inicial...");
+						System.out.println("Opï¿½ï¿½o nï¿½o reconhecida. Retornando ao Menu Inicial...");
 						System.out.println();
 						System.out.println();
 						op = 0;
@@ -96,30 +96,30 @@ public class Teste {
 					
 					
 				} while(op == 2);
-				break; // Final da remoção
+				break; // Final da remoï¿½ï¿½o
 			case 3: // Imprimir a lista (primeiro ao ultimo)
 				lista.ImprimirVoltando();
 				break;
-				// Fim da impressão
+				// Fim da impressï¿½o
 			
 			case 4: // Imprimir a lista (ultimo ao primeiro)
 				lista.ImprimirIndo();
 				break;
-				// Fim da impressão
+				// Fim da impressï¿½o
 			
 			case 5: // Imprimir a lista (nos dois sentidos)
 				lista.Imprimir();
 				break;
-				// Fim da impressão
+				// Fim da impressï¿½o
 			
 			case 0:
-				System.out.println("Execução finalizada!");
+				System.out.println("Execuï¿½ï¿½o finalizada!");
 				op = 9;
 				break;
 			
 				
 			} // FIM DO SWITCH
-		} while ((op >= 0) && (op<=5)); //Fim da execução
+		} while ((op >= 0) && (op<=5)); //Fim da execuï¿½ï¿½o
 			
 			
 			
@@ -130,6 +130,6 @@ public class Teste {
 		System.out.println("nova lista");
 		lista.Imprimir();*/
 	
-	
+		sc.close();
 	}
 }

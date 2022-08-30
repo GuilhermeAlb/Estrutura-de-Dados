@@ -7,6 +7,8 @@ public class Lista {
 		this.ref = null;
 	}
 
+	
+
 	public No getRef() {
 		return ref;
 	}
@@ -15,28 +17,28 @@ public class Lista {
 		this.ref = ref;
 	}
 
-	//metodo para inserir nós na lista
+	//metodo para inserir nÃ³s na lista
 	public void Inserir (int x) {
-		if ( ref == null) { //primeira inserção
+		if ( ref == null) { //primeira inserï¿½ï¿½o
 			ref = new No (x, ref, null);
 		}
-		else { //proximas inserções
+		else { //proximas inserÃ§Ãµes
 			ref = new No (x, ref, null);
 			ref.getProx().setAnt(ref);
 		}
 	}
-	//teste para saber se a lista está vazia
+	//teste para saber se a lista estï¿½ vazia
 	public void ListaVazia (boolean vazia) {
 		if (ref == null) {
 			vazia = true;
 		}
 		else { vazia = false; }
-		System.out.println("A lista está vazia? "+vazia);
+		System.out.println("A lista estÃ¡ vazia? "+vazia);
 	}
 	//exibir a lista na tela (int info) nos dois sentidos
 	public void Imprimir () {
 		if (ref == null) {
-			System.out.println("A lista está vazia");
+			System.out.println("A lista estÃ¡ vazia");
 		}
 		else {
 			No i = ref;
@@ -59,10 +61,10 @@ public class Lista {
 			}
 		}		
 	}
-	//exibir a lista na tela (int info) começando pelo ultimo valor inserido
+	//exibir a lista na tela (int info) comeÃ§ando pelo ultimo valor inserido
 	public void ImprimirIndo () {
 		if (ref == null) {
-			System.out.println("A lista está vazia");
+			System.out.println("A lista estÃ¡ vazia");
 		}
 		else {
 			System.out.println("imprimindo do ultimo inserido ao primeiro inserido: ");
@@ -77,10 +79,10 @@ public class Lista {
 		}	
 	}
 	
-	//exibir a lista na tela (int info) começando pelo primeiro valor inserido
+	//exibir a lista na tela (int info) comeÃ§ando pelo primeiro valor inserido
 	public void ImprimirVoltando () {
 		if (ref == null) {
-			System.out.println("A lista está vazia");
+			System.out.println("A lista estÃ¡ vazia");
 		}
 		else {
 			System.out.println("imprimindo do primeiro inserido ao ultimo inserido: ");
@@ -103,26 +105,26 @@ public class Lista {
 				
 	}
 	
-	/*Para remover um nó da lista.
-	 * no método o nó será desconectado da lista. Logo o anterior do que será removido
-	 * receberá o seu proximo como o proximo dele, e o proximo do que será removido
-	 * receberá o anterior dele como o seu novo anterior. Assim o Nó a ser removido é
-	 * 100% desconectado da lista e não voltará mais a ser manipulado.
-	 * Obs.: Ele continuará na memória principal até q o gerenciador de resíduos o apague.
+	/*Para remover um nï¿½ da lista.
+	 * no mï¿½todo o nï¿½ serï¿½ desconectado da lista. Logo o anterior do que serï¿½ removido
+	 * receberï¿½ o seu proximo como o proximo dele, e o proximo do que serï¿½ removido
+	 * receberï¿½ o anterior dele como o seu novo anterior. Assim o Nï¿½ a ser removido ï¿½
+	 * 100% desconectado da lista e nï¿½o voltarï¿½ mais a ser manipulado.
+	 * Obs.: Ele continuarï¿½ na memï¿½ria principal atï¿½ q o gerenciador de resï¿½duos o apague.
 	 */
 	public void Remover (int remove) {
 		if (ref == null) {
-			System.out.println("A lista está vazia, não há o que remover");
+			System.out.println("A lista estï¿½ vazia, nï¿½o hï¿½ o que remover");
 		}
 		else {
 			No i = ref;
 			int teste = 1;
 			while (teste == 1) { //testar se o valor pertence a lista 
 				
-				/* testar se o valor atual de 'i' é diferente do pedido
-				 *e testar se o valor atual de 'i' não é o ultimo valor.
-				 *se for diferente do valor pedido e não for o ultimo
-				 *valor da lista, 'i' passará para o próximo valor.
+				/* testar se o valor atual de 'i' ï¿½ diferente do pedido
+				 *e testar se o valor atual de 'i' nï¿½o ï¿½ o ultimo valor.
+				 *se for diferente do valor pedido e nï¿½o for o ultimo
+				 *valor da lista, 'i' passarï¿½ para o prï¿½ximo valor.
 				 */
 				if ((i.getInfo() != remove) && (i.getProx() != null)) {
 					i = i.getProx();
@@ -130,16 +132,16 @@ public class Lista {
 				
 				/*Se o ultimo valor de 'i' ainda for diferente do valor
 				 * pedido, sabemos que o valor que foi pedido para ser
-				 *removido não pertence a lista e nenhuma alteração será
+				 *removido nï¿½o pertence a lista e nenhuma alteraï¿½ï¿½o serï¿½
 				 *feita na lista.
 				 */
 				else if ((i.getProx() == null) && (i.getInfo() != remove)) {
-					System.out.println("O valor não pertence à lista.");
+					System.out.println("O valor nï¿½o pertence ï¿½ lista.");
 					break;
 				}
 				
-				/*caso as duas condições acima dêem false então encontramos
-				 *o valor que foi pedido e a remoção será feita logo abaixo
+				/*caso as duas condiï¿½ï¿½es acima dï¿½em false entï¿½o encontramos
+				 *o valor que foi pedido e a remoï¿½ï¿½o serï¿½ feita logo abaixo
 				 */
 				else if (remove == i.getInfo()) {
 					if(i.getAnt() == null) { //quando for remover o primeiro da lista (NOT OK)
@@ -205,12 +207,12 @@ public class Lista {
 	
 	
 	
-	//Buscar posição do valor
+	//Buscar posiï¿½ï¿½o do valor
 	public void BuscarPosicao(int busca) {
 		if (ref == null) {//teste de lista vazia
-			System.out.println("não há nenhum dado na lista. Lista Vazia.");
+			System.out.println("nï¿½o hï¿½ nenhum dado na lista. Lista Vazia.");
 		}
-		else { // caso a lista n esteja vazia, então...
+		else { // caso a lista n esteja vazia, entï¿½o...
 			No i;
 			i = ref;
 			while (busca != i.getInfo()) {
