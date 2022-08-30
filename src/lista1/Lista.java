@@ -1,4 +1,4 @@
-package lista1;
+	package lista1;
 
 public class Lista {
 	private No ref = null;
@@ -15,7 +15,7 @@ public class Lista {
 		this.ref = ref;
 	}
 
-	
+	//metodo para inserir nós na lista
 	public void Inserir (int x) {
 		if ( ref == null) { //primeira inserção
 			ref = new No (x, ref, null);
@@ -25,7 +25,7 @@ public class Lista {
 			ref.getProx().setAnt(ref);
 		}
 	}
-	
+	//teste para saber se a lista está vazia
 	public void ListaVazia (boolean vazia) {
 		if (ref == null) {
 			vazia = true;
@@ -33,7 +33,7 @@ public class Lista {
 		else { vazia = false; }
 		System.out.println("A lista está vazia? "+vazia);
 	}
-	
+	//exibir a lista na tela (int info) nos dois sentidos
 	public void Imprimir () {
 		if (ref == null) {
 			System.out.println("A lista está vazia");
@@ -59,7 +59,7 @@ public class Lista {
 			}
 		}		
 	}
-	
+	//exibir a lista na tela (int info) começando pelo ultimo valor inserido
 	public void ImprimirIndo () {
 		if (ref == null) {
 			System.out.println("A lista está vazia");
@@ -77,7 +77,7 @@ public class Lista {
 		}	
 	}
 	
-	
+	//exibir a lista na tela (int info) começando pelo primeiro valor inserido
 	public void ImprimirVoltando () {
 		if (ref == null) {
 			System.out.println("A lista está vazia");
@@ -103,7 +103,13 @@ public class Lista {
 				
 	}
 	
-	
+	/*Para remover um nó da lista.
+	 * no método o nó será desconectado da lista. Logo o anterior do que será removido
+	 * receberá o seu proximo como o proximo dele, e o proximo do que será removido
+	 * receberá o anterior dele como o seu novo anterior. Assim o Nó a ser removido é
+	 * 100% desconectado da lista e não voltará mais a ser manipulado.
+	 * Obs.: Ele continuará na memória principal até q o gerenciador de resíduos o apague.
+	 */
 	public void Remover (int remove) {
 		if (ref == null) {
 			System.out.println("A lista está vazia, não há o que remover");
@@ -160,7 +166,11 @@ public class Lista {
 					
 				}
 			}
-		}/*
+		}
+		
+		/*
+		 * 
+		 *---------TESTES ANTIGOS-----------
 			for (; ; i = i.getProx()) {
 				if(remove == i.getInfo()) {
 					if(i.getAnt() == null) { //quando for remover o primeiro da lista (NOT OK)
@@ -190,6 +200,23 @@ public class Lista {
 				}	
 			}*/
 		
+		
+	}
+	
+	
+	
+	//Buscar posição do valor
+	public void BuscarPosicao(int busca) {
+		if (ref == null) {//teste de lista vazia
+			System.out.println("não há nenhum dado na lista. Lista Vazia.");
+		}
+		else { // caso a lista n esteja vazia, então...
+			No i;
+			i = ref;
+			while (busca != i.getInfo()) {
+				
+			}	
+		}
 		
 	}
 }
