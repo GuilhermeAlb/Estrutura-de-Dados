@@ -1,14 +1,39 @@
 package arvore;
 
 public class No {
-    
-    int valor;
-    No esquerda, direita;
-
-    public No (int valor) {
-        this.valor = valor;
+    int info;
+    No esq, dir;
+   
+	No(int info) {
+        this.info = info;
+        this.esq = null;
+        this.dir = null;
     }
 
-    public static No raiz;
-    //https://www.youtube.com/watch?v=Dg7ObtAwQvs
+    public int getInfo() {
+		return info;
+	}
+
+	public void setInfo(int info) {
+		this.info = info;
+	}
+
+    public No getEsq() {
+		return Esq;
+	}
+
+	public void setEsq(No esq) {
+		this.esq = esq;
+	}
+
+    public No getDir() {
+		return Dir;
+	}
+
+	public void setDir(No dir) {
+		this.dir = dir;
+	}
+
+
+    
 }
